@@ -16,7 +16,7 @@
            const urlObject = new URL(url);
            const code = urlObject.searchParams.get('code');
            alert(code);
-           $('code').val = code;
+           $('#codeId').val = code;
         }
         function resize(code) {
             var url = (window.location != window.parent.location)
@@ -32,7 +32,7 @@
 <body>
     <form>
         Code ML del iframe:
-        <input type="text" name="code">
+        <input type="text" name="code" id="codeId">
         <button  onclick="javascript:obtenerCode();" >Obtener codigo</button>
         <button  onclick="javascript:resize(this.form.code.value);"> Mandar codigo</button>
         <a id="mercadolibre"
