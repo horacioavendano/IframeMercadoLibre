@@ -16,7 +16,7 @@
            const urlObject = new URL(url);
            const code = urlObject.searchParams.get('code');
            alert(code);
-           $('#codeId').val = code;
+           $('#codeId').val(code);
         }
         function resize(code) {
             var url = (window.location != window.parent.location)
