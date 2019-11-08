@@ -2,6 +2,10 @@
 <html>
 
 <head>
+        <script
+        src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+        crossorigin="anonymous"></script>
     <script>
        
         function obtenerCode(){
@@ -12,7 +16,7 @@
            const urlObject = new URL(url);
            const code = urlObject.searchParams.get('code');
            alert(code);
-           document.getElementsByName('code').value = code;
+           $('code').val = code;
         }
         function resize(code) {
             var url = (window.location != window.parent.location)
