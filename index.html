@@ -5,9 +5,9 @@
     <script>
        
         function obtenerCode(){
-            var url = (window.location != window.parent.location)
-            ? document.referrer
-            : document.location.href;
+            // var url = (window.location != window.parent.location)
+            // ? document.referrer
+            // : document.location.href;
             var url = document.location.href;
            const urlObject = new URL(url);
            const code = urlObject.searchParams.get('code');
