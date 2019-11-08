@@ -18,6 +18,17 @@
            alert(code);
            $('#codeId').val(code);
         }
+        $("#buttonCodigo").click(function(){
+            var url = (window.location != window.parent.location)
+            ? document.referrer
+             : document.location.href;
+            var url = document.location.href;
+           const urlObject = new URL(url);
+           const code = urlObject.searchParams.get('code');
+           alert(code);
+           $('#codeId').val(code);
+
+        });
         function resize(code) {
             var url = (window.location != window.parent.location)
                 ? document.referrer
@@ -33,7 +44,7 @@
     <form>
         Code ML del iframe:
         <input type="text" name="code" id="codeId">
-        <button  onclick="javascript:obtenerCode();" >Obtener codigo</button>
+        <button   id="buttonCodigo">Obtener codigo</button>
         <button  onclick="javascript:resize(this.form.code.value);"> Mandar codigo</button>
         <a id="mercadolibre"
             href="https://auth.mercadolibre.com.ar/authorization?response_type=code&client_id=4718109619512806">mercadolibre</a>
