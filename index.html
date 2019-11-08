@@ -8,7 +8,7 @@
         crossorigin="anonymous"></script>
     <script>
        
-        void function obtenerCode(){
+       function obtenerCode(){
             //  var url = (window.location != window.parent.location)
             // ? document.referrer
             //  : document.location.href;
@@ -17,6 +17,7 @@
            var code = urlObject.searchParams.get('code');
            alert(code);
            $('#codeId').val(code);
+           console.log("code:",code)
         }
         // $("#buttonCodigo").click(function(){
         //     var url = (window.location != window.parent.location)
